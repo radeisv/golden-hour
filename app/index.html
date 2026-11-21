@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Golden Hour — GTA-style cover maker</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23ffd23e'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main class="app">
+  <aside class="controls" id="controls">
+    <h1>Golden Hour</h1>
+    <p class="tag">Turn your photos into a GTA-style cover. Everything runs offline.</p>
+
+    <section>
+      <h2>Size</h2>
+      <div class="row" id="sizes">
+        <button type="button" data-size="landscape" class="active">Landscape</button>
+        <button type="button" data-size="portrait">Portrait</button>
+        <button type="button" data-size="square">Square</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Photos</h2>
+      <label>One photo for all six panels
+        <input id="upload-all" type="file" accept="image/*">
+      </label>
+      <label>Or several at once (fills panels in order)
+        <input id="upload-multi" type="file" accept="image/*" multiple>
+      </label>
+      <div id="photo-slots"></div>
+    </section>
+
+    <section>
+      <h2>Words</h2>
+      <div id="word-fields"></div>
+    </section>
+
+    <section>
+      <h2>Roles &amp; locations</h2>
+      <div id="role-fields"></div>
+    </section>
+
+    <section>
+      <h2>Grade</h2>
+      <div class="row" id="presets"></div>
+      <label>Treatment <input id="treatment" type="range" min="0" max="1" step="0.01" value="0.55"></label>
+      <label>Poster Ink <input id="ink" type="range" min="0" max="1" step="0.01" value="0"></label>
+    </section>
+
+    <section>
+      <h2>Export PNG</h2>
+      <div class="row">
+        <button type="button" data-export="landscape">1920 × 1080</button>
+        <button type="button" data-export="portrait">1080 × 1350</button>
+        <button type="button" data-export="square">1080 × 1080</button>
+      </div>
+    </section>
+
+    <p id="status" role="status"></p>
+  </aside>
+  <section class="stage-wrap">
+    <canvas id="stage" width="1920" height="1080" aria-label="The cover"></canvas>
+  </section>
+</main>
+<script type="module" src="./src/editor.js"></script>
+</body>
+</html>

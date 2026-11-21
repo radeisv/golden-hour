@@ -1,0 +1,29 @@
+html, body { margin: 0; height: 100%; background: #12081f; color: #f4ecff; font: 14px/1.45 system-ui, sans-serif; }
+.app { display: flex; height: 100%; box-sizing: border-box; }
+.controls { width: 330px; flex: 0 0 330px; height: 100%; overflow-y: auto; padding: 18px 16px 32px; box-sizing: border-box; background: #1c0b2e; border-right: 2px solid #d9a441; }
+.controls h1 { margin: 0 0 4px; font-family: Anton, sans-serif; font-size: 30px; letter-spacing: 1px; color: #ffd23e; }
+.tag { margin: 0 0 14px; color: #c9b8e8; }
+.controls section { margin: 16px 0; padding-top: 12px; border-top: 1px solid #3a2358; }
+.controls h2 { margin: 0 0 8px; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; color: #ff8fd0; }
+label { display: flex; flex-direction: column; gap: 5px; margin: 8px 0; font-weight: 600; font-size: 13px; }
+label.inline { flex-direction: row; align-items: center; gap: 8px; }
+input[type=text] { font: inherit; padding: 7px 9px; border: 1px solid #5b3a86; border-radius: 6px; background: #2a1544; color: #fff; }
+input[type=file] { font: inherit; color: #d9c8f5; }
+input[type=range] { width: 100%; accent-color: #ffd23e; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; }
+button { font: inherit; font-weight: 700; padding: 8px 12px; border: 1px solid #d9a441; border-radius: 6px; background: #2a1544; color: #ffd23e; cursor: pointer; }
+button:hover { background: #3a1f5c; }
+button.active { background: #ffd23e; color: #2a1503; }
+.slot { margin: 10px 0; padding: 10px; border: 1px solid #3a2358; border-radius: 8px; background: #241138; }
+.slot-head { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 4px; }
+.slot-head .loc { color: #c9b8e8; font-size: 12px; }
+.role-row { display: flex; gap: 8px; }
+.role-row label { flex: 1; min-width: 0; }
+#status { min-height: 20px; margin: 12px 0 0; color: #9be89b; }
+#status.error { color: #ff8a8a; }
+.stage-wrap { flex: 1; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; min-width: 0; background: #0d0616; }
+#stage { max-width: 100%; max-height: 100%; box-shadow: 0 12px 44px rgba(0, 0, 0, 0.6); background: #160a26; }
+body.shot-cover .controls { display: none; }
+body.shot-cover .app { padding: 0; }
+body.shot-cover .stage-wrap { padding: 0; }
+body.shot-cover #stage { max-width: none; max-height: none; width: 100vw; height: 100vh; box-shadow: none; }
